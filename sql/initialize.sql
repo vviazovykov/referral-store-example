@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS referee;
+
+CREATE TABLE referee(
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    user_id VARCHAR(255) NOT NULL,
+    referral_code VARCHAR(255) NOT NULL,
+    invitees_amount INTEGER,
+    tier VARCHAR(15),
+    currency VARCHAR(5),
+    PRIMARY KEY (id),
+    UNIQUE (id),
+    UNIQUE (user_id)
+);
+
+INSERT INTO referee values (1, '1', 'AN6AF8B17A98CA57C2060134ERE8098A', 4, 'TIER_1', 'USD');
+INSERT INTO referee values (2, '2', 'L373F8B53A98CA57C2060134F9E8081B', 6, 'TIER_2', 'USD');
+INSERT INTO referee values (3, '3', 'B873F8B17A98CA57C2880134F9E8053C', 11, 'TIER_3', 'USD');
